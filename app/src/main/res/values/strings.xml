@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Supermarket Control</string>
+    <string name="cadastro_user">Cadastro Usuário</string>
+    <string name="confirmar_senha">Confirme a senha:</string>
+    <string name="senha">Senha:</string>
+    <string name="email">E-mail:</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="nome">Nome:</string>
+    <string name="emailHint">name@email.com.br</string>
+    <string name="primeiroCadastro">Cadastre-se aqui !</string>
+    <string name="entrar">Entrar</string>
+    <string name="forgetPassword">Esqueceu a senha?</string>
+    <string name="askCadastro">Ainda não tem um cadastro?</string>
+    <string name="add">ADICIONAR</string>
+    <string name="produto">Produto:</string>
+    <string name="qts">Quantidade:</string>
+    <string name="listCompras">Lista de Compras:</string>
+    <string name="startShop">Iniciar compras</string>
+    <string name="title_activity_teste">TesteActivity</string>
+    <string name="addProduto">Adicionar Produto</string>
+    <string name="empty">Sem nenhum item</string>
+    <string name="voltar">Voltar</string>
+
+
+</resources>

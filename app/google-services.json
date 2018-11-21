@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "49013909145",
+    "firebase_url": "https://supermarketcontrol-1602d.firebaseio.com",
+    "project_id": "supermarketcontrol-1602d",
+    "storage_bucket": "supermarketcontrol-1602d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:49013909145:android:3130133a005d9202",
+        "android_client_info": {
+          "package_name": "com.example.danisantiago.supermarketcontrol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "49013909145-7a6td3d2vemu8cq2oen6ksor7d7nah2s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6tqlWyzgbqi5RTpQWZFKrfGF_7tbvQFc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
