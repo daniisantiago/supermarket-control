@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.GerenciarCompras">
+    tools:context=".Activity.GerenciarCompras"
+    android:id="@+id/atualizarCompras">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,64 +17,21 @@
             android:orientation="vertical">
 
             <TextView
+                android:layout_marginTop="25dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:gravity="center"
-                android:text="EDIÇÃO DE COMPRAS"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textSize="16sp"
+                android:text="Selecione a lista que deseja fazer alteração: "/>
 
-            <TextView
+            <RadioGroup
+                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="10dp"
-                android:text="Lista de Compras:"
-                android:textSize="18sp" />
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <ListView
-                        android:id="@+id/editListCompras"
-                        android:layout_width="300dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="8dp"></ListView>
-                </LinearLayout>
-
-            </ScrollView>
+                android:id="@+id/RadioListaCompras"/>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Valor:"
-                    android:textSize="18sp" />
-
-                <EditText
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="10dp"
-                    android:text="0,00"
-                    android:inputType="numberDecimal"/>
-            </LinearLayout>
-
-            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -85,18 +43,19 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/btn_customizado"
-                    android:text="Editar Valor"
+                    android:text="Definir valor da compra"
                     android:textColor="@android:color/white" />
 
                 <Button
-                    android:id="@+id/btnExcluirLista"
+                    android:id="@+id/btnExcluirCompra"
                     android:layout_width="350dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/btn_laranja"
+                    android:text="Excluir Compra"
                     android:textColor="@android:color/white"
-                    android:text="Excluir Lista"
-                    android:layout_marginBottom="20dp"/>
+                    android:layout_marginBottom="10dp"/>
+
             </LinearLayout>
 
 

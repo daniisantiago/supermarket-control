@@ -43,7 +43,8 @@
         <activity
             android:name=".Activity.EsqueceuSenha"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".Activity.GerenciarCompras"></activity>
+        <activity android:name=".Activity.GerenciarCompras" />
+        <activity android:name=".Activity.EditarListaCompras"></activity>
     </application>
 
 </manifest>

@@ -1,7 +1,13 @@
 package com.example.danisantiago.supermarketcontrol.Activity;
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
+import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,6 +31,7 @@ public class EsqueceuSenha extends AppCompatActivity {
     private ImageButton imgVoltar;
 
     FirebaseAuth firebase;
+    private boolean enviou = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +56,9 @@ public class EsqueceuSenha extends AppCompatActivity {
                             if(task.isSuccessful()){
                                 Log.d("TAG", "E-mail para redefinição de senha enviado!");
                                 Toast.makeText(EsqueceuSenha.this, "Verifique seu e-mail para redefinir sua senha!", Toast.LENGTH_LONG).show();
+                                enviou = true;
                                 voltarLogin();
+                                Notificacao();
                             }else{
                                 Toast.makeText(EsqueceuSenha.this, "E-mail inválido!", Toast.LENGTH_LONG).show();
                             }
@@ -60,6 +69,7 @@ public class EsqueceuSenha extends AppCompatActivity {
                 }
             }
         });
+
 
         imgVoltar = (ImageButton)findViewById(R.id.imageVoltarLogin);
         imgVoltar.setOnClickListener(new View.OnClickListener() {
@@ -75,5 +85,21 @@ public class EsqueceuSenha extends AppCompatActivity {
         Intent intent = new Intent(this, Login.class);
         startActivity(intent);
         finish();
+    }
+
+    private void Notificacao(){
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
+                .setSmallIcon(R.drawable.app_icon)
+                .setContentTitle("Redefinição de senha!")
+                .setContentText("Check seu e-mail para a conclusão de operação!");
+
+        Uri email = Uri.parse("content://path/to/email");
+        Intent intent = new Intent(Intent.ACTION_SEND, email);
+
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        builder.setContentIntent(pendingIntent);
+
+        NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        manager.notify(0, builder.build());
     }
 }

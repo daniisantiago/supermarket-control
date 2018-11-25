@@ -8,14 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.TextView;
 
 import com.example.danisantiago.supermarketcontrol.Entidades.Produtos;
 import com.example.danisantiago.supermarketcontrol.R;
 
 import java.util.ArrayList;
-import java.util.UUID;
 
 public class ProdutosAdapter extends ArrayAdapter<Produtos> {
     private ArrayList<Produtos> produtos;
@@ -34,7 +31,6 @@ public class ProdutosAdapter extends ArrayAdapter<Produtos> {
     @Override
     public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View view = null;
-
 
         if(produtos != null){
             final Produtos produtos1 = produtos.get(position);
@@ -55,12 +51,6 @@ public class ProdutosAdapter extends ArrayAdapter<Produtos> {
                 }
             });
 
-//            txtNome.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//                @Override
-//                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-//                    produtos1.setEscolhido(isChecked);
-//                }
-//            });
             txtNome.setText(produtos1.getNome());
         }
 

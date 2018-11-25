@@ -39,12 +39,14 @@ public class ComprasAdapter extends ArrayAdapter<Compras> {
         final ViewHolder viewHolder = new ViewHolder();
         if (compras != null) {
             final Compras compras1 = compras.get(position);
+            final String valor;
 
             LayoutInflater inflater = LayoutInflater.from(context);
             view = inflater.inflate(R.layout.activity_compras, parent, false);
 
             viewHolder.txtDia = (TextView) view.findViewById(R.id.diaCompra);
-            viewHolder.txtDia.setText(compras1.getDiaCompra());
+            valor  = String.valueOf(compras1.getValor());
+            viewHolder.txtDia.setText(compras1.getDiaCompra() + " Valor: R$" + valor);
             viewHolder.listView = (ListView) view.findViewById(R.id.listCompra);
 //            ProdutosListAdapter adapter = new ProdutosListAdapter(context, compras1.getListaProdutos());
 //            listView.setAdapter(adapter);

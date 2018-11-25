@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Main Menu"
+        app:showAsAction="always"
+        android:icon="@drawable/dots">
+        <menu>
+            <item android:id="@+id/pessoa"
+                android:icon="@drawable/account"
+                android:title="Usuario"/>
+
+            <item android:title="Home"
+                android:id="@+id/visuHome"
+                android:icon="@drawable/home"/>
+
+            <item android:title="Visualizar Compras"
+                android:id="@+id/visuCompras"
+                android:icon="@drawable/cart"/>
+
+            <item android:icon="@drawable/trash"
+                android:id="@+id/lixoListaCompra"
+                android:title="Apagar todas as Compras"/>
+
+            <item
+                android:id="@+id/sair"
+                android:icon="@drawable/exit"
+                android:title="Sair"/>
+
+        </menu>
+    </item>
+</menu>

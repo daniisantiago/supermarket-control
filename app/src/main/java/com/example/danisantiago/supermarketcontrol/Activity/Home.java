@@ -46,9 +46,7 @@ public class Home extends AppCompatActivity {
 
     private ListView listShops;
     private Button btnModal, btnInicioCompra;
-    private TextView vazia;
     private ArrayList<Produtos> proximo = new ArrayList<Produtos>();
-    private ArrayList<Produtos> testList = new ArrayList<>();
 
     private FirebaseAuth usuarioFirebase;
     private DatabaseReference firebase;

@@ -182,7 +182,7 @@ public class InicioCompra extends AppCompatActivity {
                 compras.setDiaCompra(diaAtual);
                 salvarCompras(compras, firebase);
                 Toast.makeText(this, "Compra Finalizada com sucesso!", Toast.LENGTH_SHORT).show();
-                voltarHome();
+                IrListaCompras();
             } else {
                 int count = 1;
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -203,7 +203,7 @@ public class InicioCompra extends AppCompatActivity {
                         compras.setDiaCompra(diaAtual);
                         salvarCompras(compras,firebase);
                         Toast.makeText(InicioCompra.this, "Compra Finalizada com sucesso!", Toast.LENGTH_SHORT).show();
-                        voltarHome();
+                        IrListaCompras();
                     }
                 });
 
@@ -245,5 +245,10 @@ public class InicioCompra extends AppCompatActivity {
         }
     }
 
+    private void IrListaCompras(){
+        Intent intent = new Intent(this, ListaCompras.class);
+        startActivity(intent);
+        finish();
+    }
 
 }
