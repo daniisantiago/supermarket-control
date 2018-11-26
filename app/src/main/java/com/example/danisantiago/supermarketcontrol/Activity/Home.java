@@ -30,6 +30,7 @@ import com.example.danisantiago.supermarketcontrol.Entidades.Produtos;
 import com.example.danisantiago.supermarketcontrol.Entidades.Supermercados;
 import com.example.danisantiago.supermarketcontrol.Helper.Base64Custom;
 import com.example.danisantiago.supermarketcontrol.R;
+import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserInfo;
@@ -38,6 +39,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 
+import java.net.PasswordAuthentication;
 import java.net.ProxySelector;
 import java.util.ArrayList;
 import java.util.List;

@@ -59,42 +59,6 @@ public class CadastroUser extends AppCompatActivity{
         btnCad = (Button) findViewById(R.id.btnCad);
         voltar = (ImageButton) findViewById(R.id.imageVoltar);
 
-        editCadNome.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if(false == hasFocus){
-                    hideKeyboard(CadastroUser.this,editCadNome);
-                }
-            }
-        });
-
-        editCadSenha.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if(false == hasFocus){
-                    hideKeyboard(CadastroUser.this,editCadSenha);
-                }
-            }
-        });
-
-        editCadEmail.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if(false == hasFocus){
-                    hideKeyboard(CadastroUser.this,editCadEmail);
-                }
-            }
-        });
-
-        editCadConfirmSenha.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if(false == hasFocus){
-                    hideKeyboard(CadastroUser.this,editCadConfirmSenha);
-                }
-            }
-        });
-
         btnCad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -185,10 +149,5 @@ public class CadastroUser extends AppCompatActivity{
         Intent intent = new Intent(CadastroUser.this, Login.class);
         startActivity(intent);
         finish();
-    }
-
-    public static void hideKeyboard(Context context, View editText){
-        InputMethodManager imm = (InputMethodManager)context.getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
     }
 }

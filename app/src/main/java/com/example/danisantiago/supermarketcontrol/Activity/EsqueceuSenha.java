@@ -89,12 +89,12 @@ public class EsqueceuSenha extends AppCompatActivity {
 
     private void Notificacao(){
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
-                .setSmallIcon(R.drawable.app_icon)
+                .setSmallIcon(R.drawable.cart_branco)
                 .setContentTitle("Redefinição de senha!")
                 .setContentText("Check seu e-mail para a conclusão de operação!");
 
-        Uri email = Uri.parse("content://path/to/email");
-        Intent intent = new Intent(Intent.ACTION_SEND, email);
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_APP_EMAIL);
 
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
         builder.setContentIntent(pendingIntent);

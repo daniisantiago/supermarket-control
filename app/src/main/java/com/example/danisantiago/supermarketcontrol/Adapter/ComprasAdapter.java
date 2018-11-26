@@ -48,10 +48,9 @@ public class ComprasAdapter extends ArrayAdapter<Compras> {
             valor  = String.valueOf(compras1.getValor());
             viewHolder.txtDia.setText(compras1.getDiaCompra() + " Valor: R$" + valor);
             viewHolder.listView = (ListView) view.findViewById(R.id.listCompra);
-//            ProdutosListAdapter adapter = new ProdutosListAdapter(context, compras1.getListaProdutos());
-//            listView.setAdapter(adapter);
+
             viewHolder.imgButton = (ImageButton) view.findViewById(R.id.ImgCompra);
-//            imgButton.setTag(position);
+
             viewHolder.imgButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

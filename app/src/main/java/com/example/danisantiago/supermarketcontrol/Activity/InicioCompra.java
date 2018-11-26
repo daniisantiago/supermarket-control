@@ -2,6 +2,7 @@ package com.example.danisantiago.supermarketcontrol.Activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.icu.util.Calendar;
 import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -38,6 +39,9 @@ import com.google.firebase.database.ValueEventListener;
 import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
 import java.text.DateFormat;
+import java.text.FieldPosition;
+import java.text.ParsePosition;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -55,7 +59,9 @@ public class InicioCompra extends AppCompatActivity {
     private AlertDialog alerta;
     private Button btnFinalizar;
     private Compras compras;
-    private String diaAtual = DateFormat.getDateInstance().format(new Date());
+    SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+    Date date = new Date();
+    private String diaAtual = dateFormat.format(date);
     private Menu contaNome;
     private int ultimoId;
     private ArrayList<Compras> testarMetodo;
@@ -228,8 +234,6 @@ public class InicioCompra extends AppCompatActivity {
 
     private boolean salvarCompras(Compras compra , DatabaseReference database) {
         try {
-//            String chave = String.valueOf(compra.getId());
-
             for(Compras aux: testarMetodo){
                 ultimoId = Integer.valueOf(aux.getId()) + 1;
             }

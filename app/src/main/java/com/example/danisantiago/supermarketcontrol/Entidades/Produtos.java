@@ -14,9 +14,6 @@ public class Produtos implements Serializable{
     private int quatidade;
     private boolean escolhido;
 
-//    UUID.randomUUID().toString()
-
-
     public Produtos() {
 
     }

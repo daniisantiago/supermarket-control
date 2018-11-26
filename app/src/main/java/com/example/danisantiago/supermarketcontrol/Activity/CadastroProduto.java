@@ -52,7 +52,6 @@ public class CadastroProduto extends AppCompatActivity {
         btnAdicionar = (Button) findViewById(R.id.btn_add_produto);
         btnVoltar = (Button) findViewById(R.id.btn_voltar_home);
 
-
         fireProduto = ConfiguracaoFirebase.getFirebase().child("usuario").child(idUser).child("listaProdutos");
         fireProduto.addValueEventListener(new ValueEventListener() {
             @Override
